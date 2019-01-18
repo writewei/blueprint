@@ -1,6 +1,5 @@
 version: '3.7'
 services:
-
   ipfs:
     image: ctheory/alpine-ipfs:v0.4.18
     deploy:
@@ -10,7 +9,6 @@ services:
         limits:
           cpus: '0.2'
           memory: 512M
-
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
@@ -36,6 +34,8 @@ services:
       - writewei_cert.pem
       - writewei_privkey.pem
       - writewei_fullchain.pem
+    environment:
+      - CONFIG_URL=https://raw.githubusercontent.com/writewei/infrastructure/master/nginx.conf
     ports:
       - target: 80
         published: 80
