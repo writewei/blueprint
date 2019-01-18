@@ -1,0 +1,33 @@
+version: '3.7'
+services:
+
+  ipfs:
+    image: ctheory/alpine-ipfs:v0.4.18
+    deploy:
+      endpoint_mode: dnsrr
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 512M
+
+  cidhookd:
+    image: jchancehud/cidhookd:latest
+    deploy:
+      endpoint_mode: dnsrr
+      replicas: 1
+      placement:
+        constraints:
+          - node.role != manager
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 128M
+
+secrets:
+  writewei_cert.pem:
+    external: true
+  writewei_privkey.pem:
+    external: true
+  writewei_fullchain.pem:
+    external: true
