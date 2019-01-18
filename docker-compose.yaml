@@ -24,7 +24,6 @@ services:
       - ipfs
       - cidhookd
     deploy:
-      endpoint_mode: dnsrr
       replicas: 1
       resources:
         limits:
