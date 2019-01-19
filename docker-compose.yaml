@@ -13,7 +13,7 @@ services:
       - target: 4001
         published: 4001
         protocol: tcp
-        mode: ingress
+        mode: host
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
