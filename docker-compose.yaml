@@ -34,7 +34,7 @@ services:
       - writewei_privkey.pem
       - writewei_fullchain.pem
     environment:
-      - CONFIG_URL=https://raw.githubusercontent.com/writewei/infrastructure/master/nginx.conf
+      - CONFIG_URL=https://raw.githubusercontent.com/writewei/blueprint/master/nginx.conf
     ports:
       - target: 80
         published: 80
