@@ -9,6 +9,11 @@ services:
         limits:
           cpus: '0.2'
           memory: 512M
+    ports:
+      - target: 4001
+        published: 4001
+        protocol: tcp
+        mode: ingress
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
