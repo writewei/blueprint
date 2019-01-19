@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   ipfs:
-    image: ctheory/alpine-ipfs:v0.4.18
+    image: ipfs/js-ipfs:latest
     deploy:
       endpoint_mode: dnsrr
       replicas: 1
@@ -10,8 +10,8 @@ services:
           cpus: '0.2'
           memory: 512M
     ports:
-      - target: 4001
-        published: 4001
+      - target: 4002
+        published: 4002
         protocol: tcp
         mode: host
   cidhookd:
