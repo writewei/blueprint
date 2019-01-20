@@ -10,8 +10,8 @@ services:
           cpus: '0.2'
           memory: 512M
     ports:
-      - target: 4002
-        published: 4002
+      - target: 4001
+        published: 4001
         protocol: tcp
         mode: host
   cidhookd:
