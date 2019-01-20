@@ -15,7 +15,7 @@ services:
         protocol: tcp
         mode: host
     volumes:
-      - '/mnt/ipfs:/root/.ipfs'
+      - '/mnt/ipfs:/data/ipfs'
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
