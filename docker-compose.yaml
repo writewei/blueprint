@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   ipfs:
-    image: ipfs/js-ipfs:latest
+    image: ipfs/go-ipfs:latest
     deploy:
       endpoint_mode: dnsrr
       replicas: 1
@@ -23,6 +23,8 @@ services:
         limits:
           cpus: '0.2'
           memory: 128M
+    environment:
+      - IPFS_HOST=ipfs
   nginx:
     image: jchancehud/alpine-nginx:latest
     depends_on:
