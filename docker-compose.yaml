@@ -14,6 +14,8 @@ services:
         published: 4001
         protocol: tcp
         mode: host
+    volumes:
+      - '/mnt/ipfs:/root/.ipfs'
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
