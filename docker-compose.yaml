@@ -15,6 +15,11 @@ services:
         mode: host
     volumes:
       - '/mnt/ipfs:/data/ipfs'
+  starsignal_ipfs:
+    image: jchancehud/star-signal:ipfs
+    deploy:
+      endpoint_mode: dnsrr
+      replicas: 1
   starsignal:
     image: jchancehud/star-signal:latest
     deploy:
