@@ -1,7 +1,7 @@
 #!/bin/sh
 
 STACK_NAME='writewei'
-COMPOSE_URL='https://raw.githubusercontent.com/writewei/infrastructure/master/docker-compose.yaml'
+COMPOSE_URL='https://raw.githubusercontent.com/writewei/blueprint/master/docker-compose.yaml'
 
 docker stack rm $STACK_NAME
 sleep 20
