@@ -35,7 +35,7 @@ services:
           cpus: '0.2'
           memory: 128M
     environment:
-      - IPFS_HOST=ipfs
+      - IPFS_HOST=starsignal_ipfs
   nginx:
     image: jchancehud/alpine-nginx:latest
     depends_on:
