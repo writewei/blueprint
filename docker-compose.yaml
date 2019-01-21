@@ -15,6 +15,11 @@ services:
         mode: host
     volumes:
       - '/mnt/ipfs:/data/ipfs'
+  starsignal:
+    image: jchancehud/star-signal:latest
+    deploy:
+      endpoint_mode: dnsrr
+      replicas: 1
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
