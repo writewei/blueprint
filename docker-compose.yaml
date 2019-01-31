@@ -25,6 +25,15 @@ services:
     deploy:
       endpoint_mode: dnsrr
       replicas: 1
+  docpind:
+    image: jchancehud/docpind:latest
+    deploy:
+      endpoint_mode: dnsrr
+      replicas: 1
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: 128M
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
