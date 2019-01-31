@@ -15,25 +15,6 @@ services:
         mode: host
     volumes:
       - '/mnt/ipfs:/data/ipfs'
-  starsignal_ipfs:
-    image: jchancehud/star-signal:ipfs
-    deploy:
-      endpoint_mode: dnsrr
-      replicas: 1
-  starsignal:
-    image: jchancehud/star-signal:latest
-    deploy:
-      endpoint_mode: dnsrr
-      replicas: 1
-  docpind:
-    image: jchancehud/docpind:latest
-    deploy:
-      endpoint_mode: dnsrr
-      replicas: 1
-      resources:
-        limits:
-          cpus: '0.2'
-          memory: 128M
   cidhookd:
     image: jchancehud/cidhookd:latest
     deploy:
